@@ -37,6 +37,9 @@ function catMouse(map, moves) {
   }
   const stepLength = map.indexOf(`
 `) + 1
+
+  // The Manhattan distance between two points A(x1, y1) and B(x2, y2)
+  // in a grid is calculated as: (x2 - x1) + (y2 - y1)
   const step = Math.abs(indexOfC % stepLength - indexOfm % stepLength) + Math.abs(parseInt(indexOfC / stepLength) - parseInt(indexOfm / stepLength))
   return step > moves ? 'Escaped!' : 'Caught!'
 }
